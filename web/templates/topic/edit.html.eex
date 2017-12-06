@@ -1,0 +1,11 @@
+<%= form_for @changeset, topic_path(@conn, :update, @topic), fn f -> %>
+    <div class="row form-group">
+        <div class="input-field col s12">
+            <%= text_input f, :title, class: "form-control" %>
+            <%= error_tag f, :title %>
+            <label for="title">Title</label>
+        </div>
+    </div>
+
+    <%= submit "Save Topic", class: "waves-effect waves-light btn-large" %>
+<% end %>
